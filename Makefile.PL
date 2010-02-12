@@ -1,0 +1,16 @@
+use inc::Module::Install;
+name 'Plack-Middleware-Hoptoad';
+all_from 'lib/Plack/Middleware/Hoptoad.pm';
+readme_from 'lib/Plack/Middleware/Hoptoad.pm';
+build_requires 'Test::More';
+test_requires 'Test::Requires';
+requires 'parent';
+requires 'Devel::StackTrace';
+requires 'Plack', 0.99;
+requires 'Try::Tiny';
+requires 'AnyEvent::HTTP';
+requires 'XML::Generator';
+auto_include_deps;
+author_tests('xt');
+auto_set_repository;
+WriteAll;
